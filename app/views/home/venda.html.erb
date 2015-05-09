@@ -1,0 +1,157 @@
+<script type="text/javascript">
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip({
+        placement : 'top'
+    });
+    
+    $('.modalitem').click(function (e) {
+    	var src = "http://steamcommunity-a.akamaihd.net/economy/image/"+$(this).find("#Image").text()+"/180x180"
+    	
+    	$('#image').attr("src",src)
+    	$('#nome').text($(this).find("#Nome").text())
+    	$('#quality').text($(this).find("#Quality").text())
+    	$('#exterior').text($(this).find("#Exterior").text())
+    	$('#rarity').text($(this).find("#Rarity").text())
+    });
+    
+    
+});
+</script>
+      <!-- Intro Block
+      ============================================-->
+      <section class="intro-block intro-page boxed-section page-bg overlay-dark-m">
+      
+        <!-- Container -->
+        <div class="container">     
+          <!-- Section Title -->
+          <div class="section-title invert-colors no-margin-b">
+            <h2>Venda seus items</h2>
+            <p class="hidden-xs">Helena is a freelance fashion house specialiasing in print designs and combining fabrics. Our stores can be found all over the world.</p>
+          </div>
+          <!-- /Section Title -->
+        </div>
+        <!-- /Container -->
+      
+      </section>
+      <!-- /Intro Block
+      ============================================-->
+      
+      <!-- Page Info Block
+      ============================================-->
+      <section class="page-info-block boxed-section">
+      
+        <!-- Container -->
+        <div class="container cont-pad-x-15"> 
+
+          <!-- Breadcrumb -->
+          <ol class="breadcrumb pull-left">
+            <li><a href="#"><i class="ti ti-home"></i></a></li>
+            <li><a href="#">Vender</a></li>
+          </ol>
+          <!-- /Breadcrumb --> 
+
+        </div>
+        <!-- /Container -->
+      
+      </section>
+      <!-- /Page Info  Block
+      ============================================-->
+      
+      <!-- Content Block
+      ============================================-->
+      <section class="content-block default-bg">
+        <!-- Container -->
+			        <div class="container cont-main no-pad-t">
+        
+          <!-- Row -->
+          <div class="row">
+
+		<ul class="rig columns-4">
+			
+			<% @itens.each do |item| %>
+			<a class="modalitem" data-toggle="modal" data-target="#myModal" >
+				<li>
+				<img src="https://steamcommunity-a.akamaihd.net/economy/image/<%= item[1]['icon_url'] %>/96fx96f" />
+				<div id="Image" hidden><%= item[1]['icon_url'] %></div>
+				<h4><%= item[1]['name'] %></h4>
+				<div id="Nome" hidden><%= item[1]['name']%></div>
+				
+				<% item[1]['tags'].each do |tag| %>
+					<% if tag['category'] == 'Quality' %>
+						<h8><%= tag['name'] %></h8>
+						<div id="Quality" hidden><%= tag['name'] %></div>
+					<% end %>
+					<% if tag['category'] == 'Exterior' %>
+						<div id="Exterior" hidden><%= tag['name'] %></div>
+					<% end %>
+					<% if tag['category'] == 'Rarity' %>
+						<div id="Rarity" hidden><%= tag['name'] %></div>
+					<% end %>
+					
+				<% end %>
+				
+				</li>
+			</a>
+			<% end %>
+		</ul>
+
+            <!-- Side Col -->
+            <div class="side-col col-sm-3 col-md-3">
+
+              <!-- Side Widget -->
+              <div class="side-widget no-margin-l">
+                           
+              </div>
+              <!-- /Side Widget -->
+
+            </div>
+            <!-- /Side Col -->
+
+          </div>
+          <!-- /Row -->
+        
+        </div>
+        <!-- /Container -->
+    </section>
+    <!-- /Content Block
+    ============================================-->
+ 
+		  	  <!-- Modal -->
+		<div class="modal fade" id="myModal"  aria-labelledby="myModalLabel" aria-hidden="true">
+		  <div class="modal-dialog" style="width: 400px">
+			<div class="modal-content">
+			  <div style="text-align: center; font-weight: bold;" class="modal-header"><span id="nome"> </span> </div>
+			  <div class="modal-body">
+					<fieldset>
+						<form>
+						<div class="form-group">
+							<center><img id="image" src="" alt=""></center>
+							<div style="background-color:#f6f4f4;text-align:center;border-bottom-color:#fff;border-bottom-width:1px;border-bottom-style:groove"><span id="quality" ></span></div>
+							<div style="background-color:#f6f4f4;text-align:center;border-bottom-color:#fff;border-bottom-width:1px;border-bottom-style:groove"><span id="exterior" ></span></div>
+							<div style="background-color:#f6f4f4;text-align:center;border-bottom-color:#fff;border-bottom-width:1px;border-bottom-style:groove"><span id="rarity" ></span></div>
+						</div>
+						<div class="form-group">
+							<div class="input-group">
+							<div class="input-group-addon"><i class="fa fa-money"></i></div>
+							<input class="form-control" placeholder="R$: " type="number" step="0.01" min="1" >
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="input-group">
+								  <div class="input-group-addon"><i class="fa fa-comments"></i></div>
+								  <textarea class="form-control" id="obs" rows="4" cols="36" style="color:#999999">Observações: </textarea>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="checkbox-inline"><input value="" type="checkbox">Eu aceito os <a class="href">Termos</a> de uso</label><br>
+							<label class="checkbox-inline"><input value="" type="checkbox"><li><a href="#" data-toggle="tooltip" data-original-title="Ao marcar esta opção o seu item será apresentado na página inicial como destaque e terá prioridade nas listagens, proporcionando uma venda mais rápida. Taxa inclusa.">Destacar item.</a></li></label>
+						</div>
+						<button class="btn btn-primary btn-bigger btn-block">Vender</button>
+						<button type="button" class="btn btn-default btn-bigger btn-block" data-dismiss="modal">Fechar</button>
+						</form>
+					</fieldset>
+			  </div>
+
+			</div>
+		  </div>
+		</div>

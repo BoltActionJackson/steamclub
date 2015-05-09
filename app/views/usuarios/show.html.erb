@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Steamid:</strong>
+  <%= @usuario.steamid %>
+</p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @usuario.nome %>
+</p>
+
+<p>
+  <strong>Nickname:</strong>
+  <%= @usuario.nickname %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @usuario.image %>
+</p>
+
+<p>
+  <strong>Profile:</strong>
+  <%= @usuario.profile %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @usuario.status %>
+</p>
+
+<%= link_to 'Edit', edit_usuario_path(@usuario) %> |
+<%= link_to 'Back', usuarios_path %>

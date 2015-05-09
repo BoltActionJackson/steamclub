@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SteamClub.com.br - Página Inicial</title>
+    
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  	<%= csrf_meta_tags %>
+
+
+    <!-- SteamClub core CSS ================================================== -->
+    
+	<link href="/uikit/css/steamclub.css" rel="stylesheet">
+
+    <!-- Bootstrap core CSS
+    ================================================== -->
+    <link href="/uikit/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template
+    ================================================== -->
+    <link href="/uikit/css/uikit.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/uikit/js/html5shiv.js"></script>
+    <script src="/uikit/js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body class="preload tile-1-bg">
+  
+    <!-- Preloader 
+    ============================================ -->
+    <div class="page-preloader">
+      <div class="vcenter"> <div class="vcenter-this"><img class="anim" src="/images/loader.gif" alt="loading..." /></div></div>
+    </div>
+    <!-- /Preloader 
+    ============================================ --> 
+    
+    <!-- Page Wrapper
+    ++++++++++++++++++++++++++++++++++++++++++++ -->
+    <div class="page-wrapper boxed-wrapper shadow">
+    	
+   	  <!-- Header Block
+      ============================================== -->
+      <header class="header-block line-top">
+      
+        <!-- Main Header
+        ............................................ -->
+        <div class="main-header container">
+        
+          <!-- Header Cols -->
+          <div class="header-cols"> 
+          
+            <!-- Brand Col -->
+            <div class="brand-col hidden-xs">
+            
+              <!-- vcenter -->
+              <div class="vcenter">
+                <!-- v-centered -->               
+                <div class="vcenter-this">
+                  <a href="index.html">
+                    <img src="/images/logo.png" alt="HELENA">
+                  </a>
+                </div>
+                <!-- v-centered -->
+              </div>
+              <!-- vcenter -->
+
+            </div>
+            <!-- /Brand Col -->
+
+            <!-- Right Col -->
+            <div class="right-col">
+            
+              <!-- vcenter -->
+              <div class="vcenter">
+              
+                <!-- v-centered -->
+                <div class="vcenter-this">
+
+                  <!-- Nav Side -->
+                  <nav class="nav-side navbar hnav hnav-sm hnav-borderless" role="navigation">
+                  
+                    <!-- Dont Collapse -->
+                    <div class="navbar-dont-collapse no-toggle">
+                    
+                      <!-- Nav Right - Steam Login -->
+                      <ul class="nav navbar-nav navbar-right case-u active-bcolor navbar-center-xs">
+						
+                      </ul>
+                      <!-- /Nav Right-->
+
+                    </div>
+                    <!-- /Dont Collapse -->
+                    
+                  </nav>
+                  <!-- /Nav Side -->
+                
+                </div>
+                <!-- /v-centered -->
+              </div>
+              <!-- /vcenter -->
+              
+            </div>
+            <!-- /Right Col -->
+            
+            <!-- Left Col -->
+            <div class="left-col">
+            
+              <!-- vcenter -->
+              <div class="vcenter">
+                
+                <!-- v-centered -->               
+                <div class="vcenter-this">
+                  
+                  <form class="header-search">
+                    <div class="form-group">
+                      <input class="form-control" placeholder="Pesquisar" type="text">
+                      <button class="btn btn-empty"><i class="fa fa-search"></i></button>
+                    </div>
+                  </form>
+
+                </div>
+                <!-- v-centered -->
+                
+              </div>
+              <!-- vcenter -->
+            
+            </div>
+            <!-- /Left Col -->
+          </div>
+          <!-- Header Cols -->
+        
+        </div>
+        <!-- /Main Header
+        .............................................. -->
+        
+        <!-- Nav Bottom
+        .............................................. -->
+        <nav class="nav-bottom hnav hnav-ruled white-bg boxed-section">
+        
+          <!-- Container -->
+          <div class="container">
+          
+            <!-- Header-->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle no-border" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <i class="fa fa-navicon"></i>
+              </button>
+              <a class="navbar-brand visible-xs" href="#"><img src="/images/logo-xs.png" alt=-"H"></a>
+            </div>
+            <!-- /Header-->
+          
+            <!-- Collapse -->
+            <div class="collapse navbar-collapse navbar-absolute">
+            
+              <!-- Navbar Center -->
+              <ul class="nav navbar-nav navbar-center line-top line-pcolor case-c">
+                <li class="active"><a href="index.html">Inicial</a></li>
+                <li class="dropdown dropdown-mega"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Loja<i class="fa fa-angle-down toggler"></i></a>
+                  <!-- Mega Menu -->
+                  <div class="mega-menu dropdown-menu">
+                    <!-- Row -->
+                    <div class="row">
+                    
+                      <!-- col -->
+                      <div class="col-md-3">
+                        <img class="featured-img hidden-xs hidden-sm" src="/images/menu-pic.png" alt="">
+                      </div>
+                      <!-- /col -->
+                      
+                      <!-- col -->
+                      <div class="col-md-3">
+					    <h5>CS:GO</h5>
+                        <ul class="links">
+                          <li><a href="category.html">Pistolas</a></li>
+                          <li><a href="category2.html">Submetralhadoras</a></li>
+                          <li><a href="product.html">Rifles</a></li>
+                          <li><a href="cart.html">Pesadas</a></li>
+                          <li><a href="checkout.html">Snipers</a></li>
+                        </ul>
+                      </div>
+                      <!-- /col -->
+                      
+                      <!-- col -->
+                      <div class="col-md-3">
+					  <h5>CS:GO</h5>
+                        <ul class="links">
+                          <li><a href="page.html">Metralhadoras</a></li>
+                          <li><a href="error-404.html">Facas</a></li>
+                          <li><a href="error-generic.html">Caixas</a></li>
+                          <li><a href="contact.html">Chaves</a></li>
+						  <li><a href="contact.html">Adesivos</a></li>
+                        </ul>
+                      </div>
+                      <!-- /col -->
+                      
+                      <!-- col -->
+                      <div class="col-md-3">
+
+                      </div>
+                      <!-- /col -->
+                    </div>
+                    <!-- /Row -->
+                  </div>
+                  <!-- /Mega Menu -->
+                </li>
+                <% if @usuario %>	
+                <li><a href="/home/venda" data-no-turbolink>Vender</a></li>
+                <li class="dropdown dropdown-mega"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Minha conta<i class="fa fa-angle-down toggler"></i></a>
+                  <!-- Mega Menu -->
+                  <div class="mega-menu dropdown-menu">
+                    <!-- Row -->
+                    <div class="row">
+                    
+                      <!-- col -->
+                      <div class="col-md-3">
+                        <img width="110" height="110" class="featured-img hidden-xs hidden-sm" src=<%= @usuario.image %> alt="">
+                      </div>
+                      <!-- /col -->
+                      
+                      <!-- col -->
+                      <div class="col-md-3">
+                        <ul class="links">
+                          <li><a href="category.html">Adicionar crédito</a></li>
+                          <li><a href="category2.html">Ofertas ativas</a></li>
+                          <li><a href="product.html">Histórico de transações</a></li>
+                        </ul>
+                      </div>
+                      <!-- /col -->
+                      <!-- col -->
+                      <div class="col-md-3">
+                        <ul class="links">
+						  <li><a href="checkout.html">Sacar saldo</a></li>
+                          <li><a href="category.html">Meu perfil</a></li>
+                          <li><a href="category2.html">Configurações</a></li>
+
+                        </ul>
+                      </div>
+                      <!-- /col -->
+                      
+
+                    </div>
+                    <!-- /Row -->
+                  </div>
+                  <!-- /Mega Menu -->
+                </li>
+                <% end %>
+                <li><a href="headers.html">A SteamClub</a></li>
+              </ul>
+              <!-- /Navbar Center -->
+              
+            </div>
+            <!-- /Collapse -->
+            
+            <!-- Dont Collapse -->
+            <div class="navbar-dont-collapse">
+			
+			
+              <!-- Navbar btn-group -->
+              <div class="navbar-btn-group btn-group navbar-right no-margin-r-xs" >
+              	
+              <% if @usuario %>	
+              	<a aria-expanded="false" class="btn" data-toggle="dropdown"><i class="icon-left ti ti-user"></i><span class="hidden-sm"><%= @usuario.nome %></span></a>
+				<ul class="dropdown-menu">
+					<li><a href="#"><i class="icon-left fa fa-gear"></i>Configurações</a></li>
+                    <li><a href="/sessions/destroy" data-no-turbolink><i class="icon-left fa fa-power-off"></i>Desconectar</a></li>
+                 </ul>
+              <% else %>
+				<%= link_to image_tag('sits_small.png'), "/auth/steam", style: "position: relative;top: 15px" %>
+			  <% end %>
+              </div>
+              <!-- /Navbar btn-group -->
+              
+              <!-- Navbar Left -->
+              <ul class="nav navbar-nav navbar-left navbar-right-xs">
+				<li class="dropdown has-panel">
+					<% if @usuario %>
+						<a aria-expanded="false" href="#" ><i class="icon-left fa fa-money"></i><span class="hidden-sm">R$ 153,51</span></a>
+					<% end %>
+				</li>
+			  </ul>
+              <!-- /Navbar Left -->
+            </div>
+            <!-- /Dont Collapse -->
+
+          </div>
+          <!-- /Container -->
+          
+        </nav>
+        <!-- /Nav Bottom
+        .............................................. -->
+        
+      </header>
+      <!-- /Header Block
+      ============================================== -->
+
+
+    <%= yield %>
+    
+          <!-- Newsletter Block
+      ============================================ -->
+      <div class="newsletter-block boxed-section overlay-dark-m cover-2-bg">
+      
+        <!-- Container -->
+        <div class="container">
+          <form>
+            <!-- Row -->
+
+            <!-- /Row -->
+          </form>
+        </div>
+        <!-- /Container -->
+      
+      </div>
+      <!-- /Newsletter Block
+      =================================================== -->
+
+      <!-- Footer
+      =================================================== -->
+      <footer class="footer-block">
+      
+        <!-- Container -->
+        <div class="container cont-top clearfix">
+        
+          <!-- Row -->
+          <div class="row">
+          
+            <!-- Brand -->
+            <div class="col-md-3 brand-col brand-center">
+              <div class="vcenter">
+                <a class="vcenter-this" href="#">
+                  <img src="/images/logo-footer.png" alt="logo"/>
+                </a>
+              </div>
+            </div>
+            <!-- /Brand -->
+            
+            <!-- Links -->
+            <div class="col-md-9 links-col">
+            
+              <!-- Row -->
+              <div class="row-fluid">
+              
+                <!-- Col -->
+                <div class="col-xs-6 col-sm-6 col-md-6">
+                  <h5>Sobre nós</h5>
+                  <p>SteamClub.com.br é um ecommerce de itens de Counter-Strike Global Offensive, onde é possível vender itens por dinheiro real ou comprar itens por preços mais enconta que o Market da Steam.</p>
+                    <!-- hlinks -->
+                    <ul class="hlinks hlinks-icons color-icons-borders color-icons-bg color-icons-hovered">
+                      <li><a href="#"><i class="icon fa fa-facebook"></i></a></li>
+                      <li><a href="#"><i class="icon fa fa-twitter"></i></a></li>
+                      <li><a href="#"><i class="icon fa fa-rss"></i></a></li>
+                      <li><a href="#"><i class="icon fa fa-google-plus"></i></a></li>
+                      <li><a href="#"><i class="icon fa fa-instagram"></i></a></li>
+                      <li><a href="#"><i class="icon fa fa-youtube"></i></a></li>
+                    </ul>
+                    <!-- /hlinks -->              
+                </div>
+                <!-- /Col -->
+                
+                <!-- Col -->
+                <div class="col-xs-6 col-sm-3 col-md-3">
+                  <h5>Institucional:</h5>
+                  <ul class="vlinks">
+                    <li><a href="#">A SteamClub</a></li>
+                    <li><a href="#">Termos de compromisso</a></li>
+                    <li><a href="#">Equipe</a></li>
+                    <li><a href="#">Contato</a></li>
+                  </ul>
+                </div>
+                <!-- /Col -->
+                
+                <!-- Col -->
+                <div class="col-xs-6 col-sm-3 col-md-3 newsletter">
+                  <ul class="grid-list cols-3 cell-pad-5">
+
+                  </ul>
+                </div>
+                <!-- /Col -->
+                
+             </div>
+             <!-- /Row -->
+             
+            </div>
+            <!-- /Links -->
+            
+          </div>
+          <!-- /Row -->
+          
+        </div>
+        <!-- /Container -->
+        
+        <!-- Bottom -->
+        <div class="footer-bottom invert-colors bcolor-bg">
+        
+          <!-- Container -->
+          <div class="container">
+          
+            <span class="copy-text">&copy; 2015 SteamClub.com.br. Theme by <a href="#">Rahisi</a> Themes.</span>
+            <!-- hlinks -->
+            <ul class="hlinks pull-right">
+              <li><a href="#">Loja</a></li>
+              <li><a href="#">Vender</a></li>
+              <li><a href="#">Minha conta</a></li>
+              <li><a href="#">A SteamClub</a></li>
+            </ul>
+            <!-- /hlinks -->
+            
+          </div>
+          <!-- /Container -->
+          
+        </div>
+        <!-- /Bottom -->
+        
+      </footer>
+      <!-- /Footer
+      =================================================== -->
+      
+      <!-- Promo Modal
+
+      <!-- /Promo Modal
+      ============================================ --> 
+    
+      
+    </div>
+    <!-- /Page Wrapper
+    ++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+    <!-- Javascript
+    ================================================== -->
+    <script src="/uikit/js/jquery-latest.min.js"></script>
+    <script src="/uikit/js/uikit.js"></script>
+    <!-- /JavaScript
+    ================================================== -->
+  </body>
+</html>
