@@ -1,0 +1,18 @@
+
+default: &default
+  adapter: mysql2
+  username: steamclub
+  password: steamclub
+  pool: 5
+  timeout: 5000
+  database: steamclub
+  socket: /tmp/mysql.sock
+  
+development:
+  <<: *default
+
+test:
+  <<: *default
+
+production:
+  <<: *default

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  steamid: MyString
+  nome: MyString
+  nickname: MyString
+  image: MyString
+  profile: MyString
+  status: MyString
+
+two:
+  steamid: MyString
+  nome: MyString
+  nickname: MyString
+  image: MyString
+  profile: MyString
+  status: MyString

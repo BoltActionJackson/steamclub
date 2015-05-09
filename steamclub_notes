@@ -1,0 +1,37 @@
+#### MYSQL ####
+
+	create user 'steamclub'@'%' identified by 'steamclub';
+	GRANT ALL PRIVILEGES ON steamclub.* To 'steamclub'@'localhost' IDENTIFIED BY 'steamclub';
+
+
+#### TABELAS ####
+
+usuarios steamid nome nickname image profile status
+
+CommunityBanned==false
+VACBanned == false 
+EconomyBan = none
+
+https://api.steampowered.com/ISteamUser/GetPlayerSummaries/v2/?key=DFD29B69257A9DAC44CF373FA899DBB0&format=json&steamids=76561198014401416
+
+
+https://api.steampowered.com/ISteamUser/GetPlayerBans/v1/?key=DFD29B69257A9DAC44CF373FA899DBB0&format=json&steamids=76561198014401416
+
+
+https://lab.xpaw.me/steam_api_documentation.html
+
+steamapi key = DFD29B69257A9DAC44CF373FA899DBB0
+
+http://steamcommunity.com/id/steamclub/inventory/json/730/2
+
+https://github.com/Alex7Kom/node-steam-tradeoffers
+
+
+Sim
+Em ordem
+name
+Quality
+Exterior
+Rarity
+
+
