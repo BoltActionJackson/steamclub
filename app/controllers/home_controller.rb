@@ -9,5 +9,9 @@ class HomeController < ApplicationController
     user = Usuario.find(session[:usuario_id])
     @itens = GetInventory(user.profile+"/inventory/json/730/2")['rgDescriptions']
   end
+
+  def ofertas
+
+  end
   
 end

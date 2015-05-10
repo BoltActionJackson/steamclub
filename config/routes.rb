@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get 'sessions/destroy'
   
   get 'home/venda'
+  get 'home/ofertas'
   
   root 'home#index'
   
