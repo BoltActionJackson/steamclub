@@ -69,29 +69,30 @@ $(document).ready(function(){
 		<ul class="rig columns-4">
 			
 			<% @itens.each do |item| %>
-			<a class="modalitem" data-toggle="modal" data-target="#myModal" >
-				<li>
-				<img src="https://steamcommunity-a.akamaihd.net/economy/image/<%= item[1]['icon_url'] %>/96fx96f" />
-				<div id="Image" hidden><%= item[1]['icon_url'] %></div>
-				<h4><%= item[1]['name'] %></h4>
-				<div id="Nome" hidden><%= item[1]['name']%></div>
-				
-				<% item[1]['tags'].each do |tag| %>
-					<% if tag['category'] == 'Quality' %>
-						<h8><%= tag['name'] %></h8>
-						<div id="Quality" hidden><%= tag['name'] %></div>
-					<% end %>
-					<% if tag['category'] == 'Exterior' %>
-						<div id="Exterior" hidden><%= tag['name'] %></div>
-					<% end %>
-					<% if tag['category'] == 'Rarity' %>
-						<div id="Rarity" hidden><%= tag['name'] %></div>
-					<% end %>
+				<% if item[1]['tradable'] %>
+				<a class="modalitem" data-toggle="modal" data-target="#myModal" >
+					<li>
+					<img src="https://steamcommunity-a.akamaihd.net/economy/image/<%= item[1]['icon_url'] %>/96fx96f" />
+					<div id="Image" hidden><%= item[1]['icon_url'] %></div>
+					<h4><%= item[1]['name'] %></h4>
+					<div id="Nome" hidden><%= item[1]['name']%></div>
 					
+					<% item[1]['tags'].each do |tag| %>
+						<% if tag['category'] == 'Quality' %>
+							<h8><%= tag['name'] %></h8>
+							<div id="Quality" hidden><%= tag['name'] %></div>
+						<% end %>
+						<% if tag['category'] == 'Exterior' %>
+							<div id="Exterior" hidden><%= tag['name'] %></div>
+						<% end %>
+						<% if tag['category'] == 'Rarity' %>
+							<div id="Rarity" hidden><%= tag['name'] %></div>
+						<% end %>
+						
+					<% end %>
+					</li>
+				</a>
 				<% end %>
-				
-				</li>
-			</a>
 			<% end %>
 		</ul>
 
