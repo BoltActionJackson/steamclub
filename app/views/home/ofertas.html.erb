@@ -1,6 +1,6 @@
       <!-- Intro Block
       ============================================-->
-      <section class="intro-block intro-page boxed-section page-bg overlay-dark-m">
+      <section class="intro-block intro-page boxed-section cover-3-bg overlay-dark-m">
       
         <!-- Container -->
         <div class="container">     
@@ -47,7 +47,7 @@
           <div class="row">
           	<div class="alert alert-info">
 			    <a href="#" class="close" data-dismiss="alert">&times;</a>
-			    <center><strong>Você possui ofertas de troca pendentes na sua Steam!</strong><br> Caso você já tenha a aceitado a proposta, clique no botão "Confirmar troca". O sistema checa a cada 5 minutos se você aceitou, utilize o botão concluir a operação imediatamente. </center>
+			    <center><strong>Você possui ofertas de troca pendentes na sua Steam!</strong><br> Caso você já tenha a aceitado a proposta, clique no botão "Confirmar troca". O sistema checa a cada 5 minutos se você aceitou, utilize o botão para concluir a operação imediatamente. </center>
 			</div>
 		    <table class="table table-striped custab">
 		    <thead>
@@ -66,16 +66,10 @@
 		                <td>MAC-10 | Candy Apple</td>
 		                <td class="text-right">
 		                	<a class="btn btn-outline" ><i class="fa icon-ok"></i>Confirmar troca</a>
-		                	<a class="btn btn-outline" alt="Visualizar página de venda"><i class="fa fa-shopping-cart"></i></a>
-		                	<a class="btn btn-outline" data-toggle="dropdown" ><i class="fa fa-gears"></i></a>
-		                	<!-- Dropdown Menu -->
-			                  <ul class="dropdown-menu pull-right">
-			                    <li><a href="#">account home</a></li>
-			                    <li><a href="#">order history</a></li>
-			                    <li><a href="#">profile</a></li>
-			                  </ul>
-			                 <!-- /Dropdown Menu -->
-		                </td>
+		                	<a class="btn btn-outline" ><i class="fa fa fa-shopping-cart"></i></a>
+		                	<a class="btn btn-outline" id="editar"><i class="fa fa-pencil"></i></a>
+		                	<a class="btn btn-outline" ><i class="fa fa-close"></i></a>
+		                	
 		            </tr>
 		            <tr>
 		                <td>2</td>
@@ -83,8 +77,9 @@
 		                <td>Vendendo</td>
 		                <td>UMP-45 | Urban DDPAT</td>
 						<td class="text-right">
-		                	<a class="btn btn-outline" alt="Visualizar página de venda"><i class="fa fa-shopping-cart"></i></a>
-		                	<a class="btn btn-outline" data-toggle="dropdown"><i class="fa fa-gears"></i></a></td>
+		                	<a class="btn btn-outline" ><i class="fa fa fa-shopping-cart"></i></a>
+		                	<a class="btn btn-outline" id="example"><i class="fa fa-pencil"></i></a>
+		                	<a class="btn btn-outline" ><i class="fa fa-close"></i></a></td>
 		            </tr>
 		            <tr>
 		                <td>1</td>
@@ -92,12 +87,20 @@
 		                <td>Vendendo</td>
 		                <td>P250 | Valence</td>
 						<td class="text-right">
-		                	<a class="btn btn-outline" alt="Visualizar página de venda"><i class="fa fa-shopping-cart"></i></a>
-		                	<a class="btn btn-outline" data-toggle="dropdown"><i class="fa fa-gears"></i></a></td>
-		            </tr>
+		                	<a class="btn btn-outline" ><i class="fa fa fa-shopping-cart"></i></a>
+		                	<a class="btn btn-outline" id="example"><i class="fa fa-pencil"></i></a>
+		                	<a class="btn btn-outline" ><i class="fa fa-close"></i></a></td>
+		            </tr>            
 		    </table>
-		    
+
+    <div class="legendabox">
+    <div class="legenda"><i class="fa fa fa-shopping-cart"></i>  Visitar página de venda</div>
+    <div class="legenda"><i class="fa fa-pencil"></i>  Editar a descrição, valor ou optar por destaque</div>
+    <div style="padding-bottom:5px;padding-top:5px;"><i class="fa fa-close"></i>  Cancelar venda e requerer item de volta</div>
+	</div>
+
           </div>
+          
           <!-- /Row -->
         
         </div>
@@ -106,3 +109,14 @@
     <!-- /Content Block
     ============================================-->
  
+<script>
+$(document).ready(function() {
+    $("#editar").popover({
+        placement: 'bottom',
+        html: 'true',
+        title : '<span class="text-info"><strong>Editando item:</strong></span>'+'<button type="button" id="close" class="close" onclick="$(&quot;#editar&quot;).popover(&quot;hide&quot;);">&times;</button>',
+        content : '<center><label class="checkbox-inline"><input value="" type="checkbox"><a>Destacar item</a></label>&nbsp;<a href="#"><i class="fa fa-question"></a></i></center><br><div class="input-group-addon"><i class="fa fa-money"></i></div><input class="form-control" placeholder="R$: " type="number" step="0.01" min="1" ><div class="input-group-addon"><i class="fa fa-comments"></i></div><textarea class="form-control" id="obs" rows="4" cols="36" style="color:#999999">Observações: </textarea><button class="btn btn-primary btn-bigger btn-block">Salvar</button>'
+    });
+});  
+ 
+</script>

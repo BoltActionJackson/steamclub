@@ -66,3 +66,20 @@ ul.rig.columns-4 li {
     box-shadow: 3px 3px 0px transparent;
     transition: 0.5s;
     }
+    
+ .legenda{
+ 	border-bottom-color:#ccc;
+ 	border-bottom-width:1px;
+ 	border-bottom-style:dotted;
+ 	padding-bottom:5px;
+ 	padding-top: 5px;
+  	}
+ .legendabox{
+ 	float: right;
+  	width: 30%;
+	border-radius: 9px 9px 9px 9px;
+	-moz-border-radius: 9px 9px 9px 9px;
+	-webkit-border-radius: 9px 9px 9px 9px;
+	border: 1px dotted #ccc;	
+	padding:10px
+ }
