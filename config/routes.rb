@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   
   get 'home/venda'
   get 'home/ofertas'
+  get 'home/loja'
   
   root 'home#index'
   
