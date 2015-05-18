@@ -7,11 +7,12 @@ class HomeController < ApplicationController
   
   def venda
     user = Usuario.find(session[:usuario_id])
-    @itens = GetInventory(user.profile+"/inventory/json/730/2")['rgDescriptions']
+    @itens = GetInventory(user.profile)
   end
 
   def ofertas
-
+    
+    puts GetTradeOffer("467041762") 
   end
   
 end

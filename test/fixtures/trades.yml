@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  usuario_id: 1
+  tradeid: MyString
+  status: MyString
+  preco: 9.99
+  destaque: false
+  name: MyString
+  image: MyString
+  quality: MyString
+  exterior: MyString
+  rarity: MyString
+
+two:
+  usuario_id: 1
+  tradeid: MyString
+  status: MyString
+  preco: 9.99
+  destaque: false
+  name: MyString
+  image: MyString
+  quality: MyString
+  exterior: MyString
+  rarity: MyString

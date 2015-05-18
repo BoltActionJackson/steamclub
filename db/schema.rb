@@ -11,7 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150506184021) do
+ActiveRecord::Schema.define(version: 20150513203737) do
+
+  create_table "trades", force: :cascade do |t|
+    t.integer  "usuario_id", limit: 4
+    t.string   "tradeid",    limit: 255
+    t.string   "status",     limit: 255
+    t.decimal  "preco",                  precision: 10, scale: 2
+    t.boolean  "destaque",   limit: 1
+    t.string   "name",       limit: 255
+    t.string   "image",      limit: 255
+    t.string   "quality",    limit: 255
+    t.string   "exterior",   limit: 255
+    t.string   "rarity",     limit: 255
+    t.datetime "created_at",                                      null: false
+    t.datetime "updated_at",                                      null: false
+  end
 
   create_table "usuarios", force: :cascade do |t|
     t.string   "steamid",    limit: 255
