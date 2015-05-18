@@ -15,4 +15,8 @@ class HomeController < ApplicationController
     puts GetTradeOffer("467041762") 
   end
   
+  def loja
+
+  end
+  
 end

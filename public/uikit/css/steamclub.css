@@ -16,7 +16,7 @@ ul.rig li {
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
-	text-align:center;
+	text-align: center;
 }
 ul.rig li img {
 	max-width: 100%;
@@ -31,12 +31,12 @@ ul.rig li p {
 	line-height: 1.5em;
 	color: #999;
 }
-ul.rig li :hover{
-color: #E7214C;
+ul.rig li :hover {
+	color: #E7214C;
 }
 
 ul.rig.columns-4 li {
-	width: 22.5%; /* this value + 2.5 should = 25% */
+	width: 21.7%; /* this value + 2.5 should = 25% */
 }
 
 @media (max-width: 480px) {
@@ -55,31 +55,84 @@ ul.rig.columns-4 li {
 		margin: 0 0 20px;
 	}
 }
-.custab{
-    border: 1px solid #ccc;
-    padding: 5px;
-    margin: 5% 0;
-    box-shadow: 3px 3px 2px #ccc;
-    transition: 0.5s;
-    }
-.custab:hover{
-    box-shadow: 3px 3px 0px transparent;
-    transition: 0.5s;
-    }
-    
- .legenda{
- 	border-bottom-color:#ccc;
- 	border-bottom-width:1px;
- 	border-bottom-style:dotted;
- 	padding-bottom:5px;
- 	padding-top: 5px;
-  	}
- .legendabox{
- 	float: right;
-  	width: 30%;
+.custab {
+	border: 1px solid #ccc;
+	padding: 5px;
+	margin: 5% 0;
+	box-shadow: 3px 3px 2px #ccc;
+	transition: 0.5s;
+}
+.custab:hover {
+	box-shadow: 3px 3px 0px transparent;
+	transition: 0.5s;
+}
+
+.legenda {
+	border-bottom-color: #ccc;
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+	padding-bottom: 5px;
+	padding-top: 5px;
+}
+.legendabox {
+	float: right;
+	width: 30%;
 	border-radius: 9px 9px 9px 9px;
 	-moz-border-radius: 9px 9px 9px 9px;
 	-webkit-border-radius: 9px 9px 9px 9px;
-	border: 1px dotted #ccc;	
-	padding:10px
- }
+	border: 1px dotted #ccc;
+	padding: 10px;
+}
+.destaquebox {
+	border-radius: 9px 9px 9px 9px;
+	-moz-border-radius: 9px 9px 9px 9px;
+	-webkit-border-radius: 9px 9px 9px 9px;
+	border: 1px solid #ccc;
+	padding: 5px;
+	width: 820px;
+	padding-top: 0px;
+	color: rgba(102, 107, 118, 0.44);
+	font-size: smaller;
+}
+.filtrobox {
+	border-radius: 9px 9px 9px 9px;
+	-moz-border-radius: 9px 9px 9px 9px;
+	-webkit-border-radius: 9px 9px 9px 9px;
+	border: 1px solid #ccc;
+	padding: 5px;
+	padding-top: 0px;
+	color: rgba(102, 107, 118, 0.44);
+	font-size: smaller;
+	height: 180px;
+}
+.filtro {
+	position: absolute;
+	top: 5px;
+	bottom: 0;
+	right: 10px;
+	margin: auto 0;
+	z-index: 10;
+	color: #E7214C;
+}
+.produto {
+	border: 1px solid #ccc;
+	width: 25%
+}
+.filtro-control {
+	display: block;
+	width: 100%;
+	height: 34px;
+	padding: 6px 12px;
+	font-size: 14px;
+	line-height: 1.42857143;
+	color: #555;
+	background-color: #fff;
+	background-image: none;
+	border: 1px solid rgba(204, 204, 204, 0.1);
+}
+.ofertas-grid {
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	box-sizing: border-box;
+}

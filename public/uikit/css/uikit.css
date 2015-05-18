@@ -826,6 +826,10 @@ pre.no-breaks, pre.no-breaks > code {
 
 /* MODALS
 -------------------------------------------------- */
+body.modal {
+    margin: 0;
+}
+
 .modal {
   z-index: 500;
 }
@@ -5264,6 +5268,12 @@ ul.tags li a:hover {
   text-align: center;
   margin: 15px 0;
   padding: 0 0 15px 0;
+  border: 1px solid #ccc;
+  box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.05);
+}
+.product:hover {
+  border: 1px solid #000;
+  transition: 0.5s;
 }
 .product .title, .product .label {
   display: block;
