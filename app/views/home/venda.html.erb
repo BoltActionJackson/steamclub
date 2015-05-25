@@ -8,6 +8,7 @@
 			var src = "http://steamcommunity-a.akamaihd.net/economy/image/" + $(this).find("#Image").text() + "/180x180"
 
 			$('#image').attr("src", src)
+			$("#iditem").val($(this).find("#Id").text())
 			$('#nome').text($(this).find("#Nome").text())
 			$('#quality').text($(this).find("#Quality").text())
 			$('#exterior').text($(this).find("#Exterior").text())
@@ -73,7 +74,6 @@
 			<div class="product-grid row grid-20 mgb-20">
 
 				<ul class="rig columns-4">
-
 					<% @itens.each do |item| %>
 					<% if item[1]['tradable'] == 1 %>
 					<a class="modalitem" data-toggle="modal" data-target="#myModal" >
@@ -83,6 +83,16 @@
 							<%= item[1]['icon_url'] %>
 						</div>
 						<h4><%= item[1]['name'] %></h4>
+						
+						
+						<% @iditens.each do |id| %>
+							<% if id[1]['classid'] == item[1]['classid'] %>
+							<div id="Id" hidden>
+								<%= id[0] %>
+							</div>
+							<% end %>
+						<% end %>
+						
 						<div id="Nome" hidden>
 							<%= item[1]['name']%>
 						</div>
@@ -101,6 +111,12 @@
 							<%= tag['name'] %>
 						</div>
 						<% end %>
+						<% if tag['category'] == 'Rarity' %>
+						<div id="Rarity" hidden>
+							<%= tag['name'] %>
+						</div>
+						<% end %>
+						
 						<% if tag['category'] == 'Rarity' %>
 						<div id="Rarity" hidden>
 							<%= tag['name'] %>
@@ -143,10 +159,11 @@
 			</div>
 			<div class="modal-body">
 				<fieldset>
-					<form>
+					<%= form_tag( { controller: "home" , action: "venda" },  method: :get) do %>
 						<div class="form-group">
 							<center><img id="image" src="" alt="">
 							</center>
+							<%= hidden_field_tag :iditem %>	
 							<div style="background-color:#f6f4f4;text-align:center;border-bottom-color:#fff;border-bottom-width:1px;border-bottom-style:solid">
 								<span id="quality" ></span>
 							</div>
@@ -162,7 +179,7 @@
 								<div class="input-group-addon">
 									<i class="fa fa-money"></i>
 								</div>
-								<input class="form-control" placeholder="R$: " type="number" step="0.01" min="1" >
+								<input id="preco" class="form-control" placeholder="R$: " type="number" step="0.01" min="1" >
 							</div>
 						</div>
 						<div class="form-group">
@@ -182,13 +199,12 @@
 								<input value="" type="checkbox">
 								<a href="#" data-toggle="tooltip" data-original-title="Ao marcar esta opção o seu item será apresentado na página inicial como destaque e terá prioridade nas listagens, proporcionando uma venda mais rápida. Taxa inclusa.">Destacar item.</a></label>
 						</div>
-						<button class="btn btn-primary btn-bigger btn-block" id = "button1" disabled>
-							Vender
-						</button>
+						<%= submit_tag "Vender", disabled: true, id: "button1", class: "btn btn-primary btn-bigger btn-block"  %>
+						
 						<button type="button" class="btn btn-default btn-bigger btn-block" data-dismiss="modal">
 							Fechar
 						</button>
-					</form>
+					<% end %>
 				</fieldset>
 			</div>
 

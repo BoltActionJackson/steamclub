@@ -2,14 +2,30 @@ require 'net/http'
 module WsHandler
   extend ActiveSupport::Concern
   
+  
+  def compraritem(itemfromme,adminid)
+    url = "http://104.236.208.44:3000/?itemfromme=#{itemfromme}&adminid=#{adminid}"
+    getResult(url)
+  end
+  
+  def venderitem(itemfromthem,adminid)
+    url = "http://104.236.208.44:3000/?itemfromthem=#{itemfromthem}&adminid=#{adminid}"
+    getResult(url)
+  end
+  
   def GetPlayerBans(steamid)
     url = "https://api.steampowered.com/ISteamUser/GetPlayerBans/v1/?key=DFD29B69257A9DAC44CF373FA899DBB0&format=json&steamids=#{steamid}"
     getResult(url)
   end
   
-  def GetInventory(profile)
+  def GetDescriptions(profile)
     url = profile+"/inventory/json/730/2"
     getResult(url)['rgDescriptions']
+  end
+  
+  def GetInventory(profile)
+    url = profile+"/inventory/json/730/2"
+    getResult(url)['rgInventory']
   end
   
   def GetTradeOffer(tradeofferid)

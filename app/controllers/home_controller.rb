@@ -7,7 +7,14 @@ class HomeController < ApplicationController
   
   def venda
     user = Usuario.find(session[:usuario_id])
-    @itens = GetInventory(user.profile)
+    @itens = GetDescriptions(user.profile)
+    @iditens = GetInventory(user.profile)
+    
+      if params[:commit]
+        puts "========"
+        puts params
+      end
+    
   end
 
   def ofertas
