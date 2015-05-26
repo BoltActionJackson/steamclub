@@ -94,32 +94,29 @@
 						<% @iditens.each do |id| %>
 							<% if id[1]['classid'] == item[1]['classid'] %>
 							<div id="Id" hidden><%= id[0] %></div>
-							
 							<% end %>
 						<% end %>
 						
 						<div id="Nome" hidden><%= item[1]['name']%></div>
 							
 						<% item[1]['tags'].each do |tag| %>
-						<% if tag['category'] == 'Quality' %>
+						<% if tag['category'] == 'Rarity' %>
 						<h8>
 							<%= tag['name'] %>
 						</h8>
-						<div id="Quality" hidden><%= tag['name'] %></div>
-						
+						<div id="Rarity" hidden><%= tag['name'] %></div>
 						<% end %>
+						
+						<% if tag['category'] == 'Quality' %>
+						<div id="Quality" hidden><%= tag['name'] %></div>
+						<% end %>
+						
 						<% if tag['category'] == 'Exterior' %>
 						<div id="Exterior" hidden><%= tag['name'] %></div>
-						
-						<% end %>
-						<% if tag['category'] == 'Rarity' %>
-						<div id="Rarity" hidden><%= tag['name'] %></div>
-						
 						<% end %>
 						
 						<% if tag['category'] == 'Rarity' %>
 						<div id="Rarity" hidden><%= tag['name'] %></div>
-						
 						<% end %>
 
 						<% end %>
