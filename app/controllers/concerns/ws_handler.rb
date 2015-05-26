@@ -20,12 +20,12 @@ module WsHandler
   end
   
   def GetDescriptions(profile)
-    url = profile+"/inventory/json/730/2"
+    url = profile+"/inventory/json/730/2/?l=portuguese"
     getResult(url)['rgDescriptions']
   end
   
   def GetInventory(profile)
-    url = profile+"/inventory/json/730/2"
+    url = profile+"/inventory/json/730/2/?l=portuguese"
     getResult(url)['rgInventory']
   end
   
