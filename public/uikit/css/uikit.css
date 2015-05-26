@@ -5268,7 +5268,7 @@ ul.tags li a:hover {
   text-align: center;
   margin: 15px 0;
   padding: 0 0 15px 0;
-  border: 1px solid #ccc;
+  border: 1px solid #F2F2F2;
   box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.05);
 }
 .product:hover {
@@ -5310,7 +5310,7 @@ ul.tags li a:hover {
 .product .image {
   display: block;
   position: relative;
-  margin: 0 0 20px 0;
+  margin: 0 0 0px 0;
 }
 .product .image a.main img {
   width: 100%;
@@ -5379,6 +5379,8 @@ ul.tags li a:hover {
 }
 .product:hover .btn-outline {
   border-color: #131416;
+  transition: 0.5s;
+  
 }
 .product .hlinks-rating {
   margin: 0 0 15px 0;
