@@ -1,12 +1,32 @@
+#### Digital Ocean ####
+	IP Address: 104.236.208.44
+	Login: root
+	Senha: steamclub321
+	
+	direto: ssh steamclub@104.236.208.44
+	login: steamclub
+	senha: stemaclub321
+	
+###### Instal node #######
+
+npm install steam fs winston readline
+curl https://raw.githubusercontent.com/creationix/nvm/v0.25.0/install.sh | bash
+source ~/.bashrc
+nvm install 0.12.3
+
 #### MYSQL ####
 
 	create user 'steamclub'@'%' identified by 'steamclub';
 	GRANT ALL PRIVILEGES ON steamclub.* To 'steamclub'@'localhost' IDENTIFIED BY 'steamclub';
 
-
+#################
 #### TABELAS ####
 
 usuarios steamid nome nickname image profile status
+
+trade usuario_id:integer itemid tradeid status preco:decimal obs:text destaque:boolean name image quality exterior rarity
+
+#################
 
 CommunityBanned==false
 VACBanned == false 
@@ -14,9 +34,7 @@ EconomyBan = none
 
 https://api.steampowered.com/ISteamUser/GetPlayerSummaries/v2/?key=DFD29B69257A9DAC44CF373FA899DBB0&format=json&steamids=76561198014401416
 
-
 https://api.steampowered.com/ISteamUser/GetPlayerBans/v1/?key=DFD29B69257A9DAC44CF373FA899DBB0&format=json&steamids=76561198014401416
-
 
 https://lab.xpaw.me/steam_api_documentation.html
 
@@ -26,6 +44,7 @@ http://steamcommunity.com/id/steamclub/inventory/json/730/2
 
 https://github.com/Alex7Kom/node-steam-tradeoffers
 
+itemid: 2223971441
 
 Sim
 Em ordem
@@ -34,4 +53,11 @@ Quality
 Exterior
 Rarity
 
+venda.html -> Selecionou item -> Botão de venda
+1) cstrade1 -> tradeoffer
+               itemsfromthem[ id ]
+2) Página no site: "Uma proposta de trade foi enviada para sua conta steam, acesse-a e clique em aceitar" "Se você já aceitou CLIQUE AQUI"
+3) usuário -> steam -> Aceitar tradeoffer
+4) https://api.steampowered.com/IEconService/GetTradeOffer/v1/?key=DFD29B69257A9DAC44CF373FA899DBB0&format=json&tradeofferid=0 ATÉ QUANDO O TRADE_OFFER_STATE = 3; SE TIVER = 2, SISTEMA ESPERA
+5) ECOMMERCE divulgar item na página de compra.html
 

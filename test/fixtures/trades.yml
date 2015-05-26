@@ -2,9 +2,11 @@
 
 one:
   usuario_id: 1
+  itemid: MyString
   tradeid: MyString
   status: MyString
   preco: 9.99
+  obs: MyText
   destaque: false
   name: MyString
   image: MyString
@@ -14,9 +16,11 @@ one:
 
 two:
   usuario_id: 1
+  itemid: MyString
   tradeid: MyString
   status: MyString
   preco: 9.99
+  obs: MyText
   destaque: false
   name: MyString
   image: MyString

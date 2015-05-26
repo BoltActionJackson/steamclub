@@ -11,8 +11,15 @@ class HomeController < ApplicationController
     @iditens = GetInventory(user.profile)
     
       if params[:commit]
-        puts "========"
-        puts params
+        
+        result = venderitem(params[:iditem].chomp,user.steamid)
+        
+          if result['tradeofferid']
+           Trade.create(usuario: user, tradeid: result['tradeofferid'], preco: params[:preco], itemid: params[:iditem], obs: params[:obs],status: 'pendente',
+           destaque: params[:destaque], name: params[:name], image: params[:image],quality: params[:quality], rarity: params[:rarity],exterior: params[:exterior])
+           
+          end
+        
       end
     
   end

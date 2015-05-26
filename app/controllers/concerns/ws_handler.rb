@@ -10,6 +10,7 @@ module WsHandler
   
   def venderitem(itemfromthem,adminid)
     url = "http://104.236.208.44:3000/?itemfromthem=#{itemfromthem}&adminid=#{adminid}"
+    puts url
     getResult(url)
   end
   
