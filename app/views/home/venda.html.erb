@@ -100,15 +100,15 @@
 						<div id="Nome" hidden><%= item[1]['name']%></div>
 							
 						<% item[1]['tags'].each do |tag| %>
-						<% if tag['category'] == 'Rarity' %>
+						<% if tag['category'] == 'Exterior' %>
 						<h8>
 							<%= tag['name'] %>
 						</h8>
-						<div id="Rarity" hidden><%= tag['name'] %></div>
+						<div id="Exterior" hidden><%= tag['name'] %></div>
 						<% end %>
 						
-						<% if tag['category'] == 'Exterior' %>
-						<div id="Exterior" hidden><%= tag['name'] %></div>
+						<% if tag['category'] == 'Rarity' %>
+						<div id="Rarity" hidden><%= tag['name'] %></div>
 						<% end %>
 						
 						<% if tag['category'] == 'Quality' %>
