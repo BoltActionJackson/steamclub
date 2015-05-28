@@ -32,5 +32,9 @@ class HomeController < ApplicationController
   def loja
 
   end
+ 
+  def inicial
+
+  end
   
 end

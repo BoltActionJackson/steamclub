@@ -1,0 +1,218 @@
+<link href="/uikit/css/board.css" rel="stylesheet">
+<script>
+$(function(){
+    $('a[title]').tooltip();
+
+    $('.btn-submit').on('click', function(e) {
+
+        var formname = $(this).attr('name'); 
+        var tabname = $(this).attr('href');
+        
+        if ($('#' + formname)[0].checkValidity()) { /* Only works in Firefox/Chrome need polyfill for IE9, Safari. http://afarkas.github.io/webshim/demos/ */
+            e.preventDefault();
+            $('ul.nav li a[href="' + tabname + '"]').parent().removeClass('disabled');
+            $('ul.nav li a[href="' + tabname + '"]').trigger('click');
+        }
+
+    });
+
+    $('ul.nav li').on('click', function(e) {
+        if ($(this).hasClass('disabled')) {
+            e.preventDefault();
+            return false;
+        }
+    });
+});
+</script>
+
+<!-- Page Info Block
+============================================-->
+<section class="page-info-block page-info-alt boxed-section">
+
+	<!-- Container -->
+	<div class="container cont-pad-x-15">
+
+		<!-- Breadcrumb -->
+		<ol class="breadcrumb pull-left">
+			<li>
+				<a href="#"><i class="ti ti-home"></i></a>
+			</li>
+			<li>
+				<a href="#">Configuração inicial</a>
+			</li>
+		</ol>
+		<!-- /Breadcrumb -->
+
+	</div>
+	<!-- /Container -->
+
+</section>
+<!-- /Page Info  Block
+============================================-->
+
+<!-- Content Block
+============================================-->
+<section class="content-block default-bg">
+	<!-- Container -->
+	<div class="container cont-main no-pad-t">
+		<section>
+			<div class="container">
+				<div class="row">
+					<div class="board">
+						<!-- <h2>Welcome to IGHALO!<sup>™</sup></h2>-->
+						<div class="board-inner">
+							<ul class="nav nav-tabs" id="myTab">
+								<div class="liner"></div>
+								<li class="active">
+									<a href="#home" data-toggle="tab" title="Bem vindo"> <span class="round-tabs one"> <i class="glyphicon glyphicon-home"></i> </span> </a>
+								</li>
+
+								<li class="disabled">
+									<a href="#profile" data-toggle="tab" title="Dados pessoais"> <span class="round-tabs two"> <i class="glyphicon glyphicon-user"></i> </span> </a>
+								</li>
+								<li class="disabled">
+									<a href="#messages" data-toggle="tab" title="Contato"> <span class="round-tabs three"> <i class="icon fa fa-inbox"></i> </span> </a>
+								</li>
+
+								<li class="disabled">
+									<a href="#settings" data-toggle="tab" title="Steam Trade URL"> <span class="round-tabs four"> <i class="icon fa fa-exchange"></i> </span> </a>
+								</li>
+
+								<li class="disabled">
+									<a href="#doner" data-toggle="tab" title="Final"> <span class="round-tabs five"> <i class="glyphicon glyphicon-ok"></i> </span> </a>
+								</li>
+
+							</ul>
+						</div>
+
+						<div class="tab-content">
+							<div class="tab-pane fade in active" id="home">
+
+								<h3 class="head text-center">Bem vindo ao SteamClub<sup>™</sup></h3>
+								<p class="narrow text-center">
+									Olá Ualas, antes de começar a vender ou comprar itens é preciso passar por uma configuração inicial. As informações que serão pedidas a seguir são para fornecer segurança durante suas transações.
+								</p>
+
+								<form class="form-horizontal text-center" id="home_form" name="home_form" role="form">
+									<fieldset>
+										<button type="submit" href="#profile" name="home_form" class="btn-submit btn btn-success btn-outline-rounded green">
+											Começar! <span style="margin-left:10px;" class="glyphicon glyphicon-send"></span>
+										</button>
+									</fieldset>
+								</form>
+
+							</div>
+							<div class="tab-pane fade" id="profile">
+								<h3 class="head text-center">Dado pessoal</h3>
+								<p class="narrow text-center">
+									Forneça o seu nome completo para confirmarmos a sua identidade na hora de resgatar o seu dinheiro após suas vendas.
+								</p>
+								<p class="text-center">
+									<form>
+										<!-- Form Group -->
+										<div class="form-group">
+											<!-- Input Group -->
+											<div class="input-group">
+												<div class="input-group-addon">
+													<i class="icon fa fa-user"></i>
+												</div>
+												<input class="form-control" placeholder="Digite seu nome completo" type="email">
+											</div>
+										</div>
+										<!-- /Form Group -->
+									</form>								
+								</p>
+
+								<form class="form-horizontal text-center" id="profile_form" name="profile_form" role="form">
+									<fieldset>
+										<button type="submit" href="#messages" name="profile_form" class="btn-submit btn btn-success btn-outline-rounded green">
+											Avançar! <span style="margin-left:10px;" class="glyphicon glyphicon-send"></span>
+										</button>
+									</fieldset>
+								</form>
+
+							</div>
+							<div class="tab-pane fade" id="messages">
+								<h3 class="head text-center">Contato</h3>
+								<p class="narrow text-center">
+									Forneça o seu e-mail para entrarmos em contato caso seja necessário.
+								</p>
+								<p class="text-center">
+									<form>
+										<!-- Form Group -->
+										<div class="form-group">
+											<!-- Input Group -->
+											<div class="input-group">
+												<div class="input-group-addon">
+													<i class="icon fa fa-inbox"></i>
+												</div>
+												<input class="form-control" placeholder="Digite seu e-mail" type="email">
+											</div>
+										</div>
+										<!-- /Form Group -->
+									</form>								
+								</p>
+								<form class="form-horizontal text-center" id="messages_form" name="messages_form" role="form">
+									<fieldset>
+										<button type="submit" href="#settings" name="messages_form" class="btn-submit btn btn-success btn-outline-rounded green">
+											Avançar <span style="margin-left:10px;" class="glyphicon glyphicon-send"></span>
+										</button>
+									</fieldset>
+								</form>
+							</div>
+							<div class="tab-pane fade" id="settings">
+								<h3 class="head text-center">Steam Trade URL</h3>
+								<p class="narrow text-center">
+									Para você utilizar o site é necessário você disponibilizar a Trade URL da sua conta Steam. Basta <a href="http://www.steamcommunity.com/my/tradeoffers/privacy" target="_blank" >clicar aqui</a> e copiar a Trade URL e colar-la a baixo. Lembre-se, que se você criar uma nova Trade URL, você precisará atualizar no SteamClub.
+								</p>
+								<p class="text-center">
+									<form>
+										<!-- Form Group -->
+										<div class="form-group">
+											<!-- Input Group -->
+											<div class="input-group">
+												<div class="input-group-addon">
+													<i class="icon fa fa-exchange"></i>
+												</div>
+												<input class="form-control" placeholder="Cole sua Trade URL" type="email">
+											</div>
+										</div>
+										<!-- /Form Group -->
+									</form>								
+								</p>
+								<form class="form-horizontal text-center" id="settings_form" name="settings_form" role="form">
+									<fieldset>
+										<button type="submit" href="#doner" name="settings_form" class="btn-submit btn btn-success btn-outline-rounded green">
+											Avançar <span style="margin-left:10px;" class="glyphicon glyphicon-send"></span>
+										</button>
+									</fieldset>
+								</form>
+							</div>
+							<div class="tab-pane fade" id="doner">
+								<div class="text-center">
+									<i class="img-intro icon-checkmark-circle"></i>
+								</div>
+								<h3 class="head text-center">Obrigado!</h3>
+								<p class="narrow text-center">
+									Sua configuração inicial foi realizada com sucesso, você já pode utilizar o site.
+								</p>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Row -->
+		<div class="row">
+
+		</div>
+
+		<!-- /Row -->
+
+	</div>
+	<!-- /Container -->
+</section>
+<!-- /Content Block
+============================================-->
