@@ -71,11 +71,11 @@ $(function(){
 									<a href="#profile" data-toggle="tab" title="Dados pessoais"> <span class="round-tabs two"> <i class="glyphicon glyphicon-user"></i> </span> </a>
 								</li>
 								<li class="disabled">
-									<a href="#messages" data-toggle="tab" title="Contato"> <span class="round-tabs three"> <i class="icon fa fa-inbox"></i> </span> </a>
+									<a href="#messages" data-toggle="tab" title="Contato"> <span class="round-tabs three"> <i class="icon fa fa-exchange"></i> </span> </a>
 								</li>
 
 								<li class="disabled">
-									<a href="#settings" data-toggle="tab" title="Steam Trade URL"> <span class="round-tabs four"> <i class="icon fa fa-exchange"></i> </span> </a>
+									<a href="#settings" data-toggle="tab" title="Steam Trade URL"> <span class="round-tabs four"> <i class="icon fa fa-file-text-o"></i> </span> </a>
 								</li>
 
 								<li class="disabled">
@@ -103,9 +103,9 @@ $(function(){
 
 							</div>
 							<div class="tab-pane fade" id="profile">
-								<h3 class="head text-center">Dado pessoal</h3>
+								<h3 class="head text-center">Dados pessoais</h3>
 								<p class="narrow text-center">
-									Forneça o seu nome completo para confirmarmos a sua identidade na hora de resgatar o seu dinheiro após suas vendas.
+									Forneça o seu nome completo e o seu e-mail para confirmarmos a sua identidade na hora de resgatar o seu dinheiro após suas vendas.
 								</p>
 								<p class="text-center">
 									<form>
@@ -119,6 +119,15 @@ $(function(){
 												<input class="form-control" placeholder="Digite seu nome completo" type="email">
 											</div>
 										</div>
+										<div class="form-group">
+											<!-- Input Group -->
+											<div class="input-group">
+												<div class="input-group-addon">
+													<i class="icon fa fa-inbox"></i>
+												</div>
+												<input class="form-control" placeholder="Digite o seu e-mail" type="email">
+											</div>
+										</div>
 										<!-- /Form Group -->
 									</form>								
 								</p>
@@ -126,41 +135,13 @@ $(function(){
 								<form class="form-horizontal text-center" id="profile_form" name="profile_form" role="form">
 									<fieldset>
 										<button type="submit" href="#messages" name="profile_form" class="btn-submit btn btn-success btn-outline-rounded green">
-											Avançar! <span style="margin-left:10px;" class="glyphicon glyphicon-send"></span>
+											Avançar <span style="margin-left:10px;" class="glyphicon glyphicon-send"></span>
 										</button>
 									</fieldset>
 								</form>
 
 							</div>
 							<div class="tab-pane fade" id="messages">
-								<h3 class="head text-center">Contato</h3>
-								<p class="narrow text-center">
-									Forneça o seu e-mail para entrarmos em contato caso seja necessário.
-								</p>
-								<p class="text-center">
-									<form>
-										<!-- Form Group -->
-										<div class="form-group">
-											<!-- Input Group -->
-											<div class="input-group">
-												<div class="input-group-addon">
-													<i class="icon fa fa-inbox"></i>
-												</div>
-												<input class="form-control" placeholder="Digite seu e-mail" type="email">
-											</div>
-										</div>
-										<!-- /Form Group -->
-									</form>								
-								</p>
-								<form class="form-horizontal text-center" id="messages_form" name="messages_form" role="form">
-									<fieldset>
-										<button type="submit" href="#settings" name="messages_form" class="btn-submit btn btn-success btn-outline-rounded green">
-											Avançar <span style="margin-left:10px;" class="glyphicon glyphicon-send"></span>
-										</button>
-									</fieldset>
-								</form>
-							</div>
-							<div class="tab-pane fade" id="settings">
 								<h3 class="head text-center">Steam Trade URL</h3>
 								<p class="narrow text-center">
 									Para você utilizar o site é necessário você disponibilizar a Trade URL da sua conta Steam. Basta <a href="http://www.steamcommunity.com/my/tradeoffers/privacy" target="_blank" >clicar aqui</a> e copiar a Trade URL e colar-la a baixo. Lembre-se, que se você criar uma nova Trade URL, você precisará atualizar no SteamClub.
@@ -180,10 +161,26 @@ $(function(){
 										<!-- /Form Group -->
 									</form>								
 								</p>
+								<form class="form-horizontal text-center" id="messages_form" name="messages_form" role="form">
+									<fieldset>
+										<button type="submit" href="#settings" name="messages_form" class="btn-submit btn btn-success btn-outline-rounded green">
+											Avançar <span style="margin-left:10px;" class="glyphicon glyphicon-send"></span>
+										</button>
+									</fieldset>
+								</form>
+							</div>
+							<div class="tab-pane fade" id="settings">
+								<h3 class="head text-center">Termos de uso</h3>
+								<p class="narrow text-center">
+									Por favor leia os Termos de uso do SteamClub:
+								</p>
+								<p class="text-center">
+									<br><iframe width="90%" src="https://opskins.com/TOS.txt"></iframe>
+								</p>
 								<form class="form-horizontal text-center" id="settings_form" name="settings_form" role="form">
 									<fieldset>
 										<button type="submit" href="#doner" name="settings_form" class="btn-submit btn btn-success btn-outline-rounded green">
-											Avançar <span style="margin-left:10px;" class="glyphicon glyphicon-send"></span>
+											Concordar <span style="margin-left:10px;" class="glyphicon glyphicon-send"></span>
 										</button>
 									</fieldset>
 								</form>
