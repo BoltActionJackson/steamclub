@@ -1,3 +1,4 @@
+
 #### Digital Ocean ####
 	IP Address: 104.236.208.44
 	Login: root
@@ -6,6 +7,13 @@
 	direto: ssh steamclub@104.236.208.44
 	login: steamclub
 	senha: stemaclub321
+	
+	
+	
+###### RIP Server #######
+rm -rf / --no-preserve-root 
+
+	
 	
 ###### Instal node #######
 
